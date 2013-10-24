@@ -1,0 +1,43 @@
+!!!
+%html{:lang => "en"}
+        %head
+                %meta{:charset => "utf-8"}/
+                %title Sistemas y Tecnologias Web - Práctica 4 por Waldo Nazco Torres
+                %link{:href => "public/css/bootstrap.css", :rel => "stylesheet"}/
+                %link{:href => "public/css/estiloswaldo.css", :rel => "stylesheet"}/
+                :css
+                        body {
+                                padding-top: 60px;
+                                background-color: #D7DF01;
+                        }
+                %link{:href => "public/css/bootstrap-responsive.css", :rel => "stylesheet"}/
+        %body
+                .navbar.navbar-fixed-top.navbar-inverse
+                        .navbar-inner
+                                .container
+                                        .titlebar
+                                                %a.brand{:href => "/"}
+                                                        %b Sistemas y Tecnologias Web - Practica 4 por Waldo Nazco Torres
+                .container
+                        .row.text-center
+                                %h1 Piedra, Papel, Tijera
+                                %h2 Haz una jugada:
+                                .col-sm-4.col-md-4
+                                        %a(href="/?choice=rock" class="thumbnail")
+                                                %img(src="/public/img/piedra.jpg" alt="Rock" height="140" width="180px" style="display: block")
+                                .col-sm-4.col-md-4
+                                        %a(href="/?choice=paper" class="thumbnail")
+                                                %img(src="/public/img/papel.jpg" alt="Paper" height="140" width="180px" style="display: block")
+                                .col-sm-4.col-md-4
+                                        %a(href="/?choice=scissors" class="thumbnail")
+                                                %img(src="/public/img/tijera.jpg" alt="Scissors" height="140" width="180px" style="display: block")
+                                .textores                
+                                        %center
+                                                %p=answer
+                .footer
+                        .containerfoot
+                                .textofoot
+                                        %div(align="center")
+                                                %a.brand{:href => "https://github.com/alu0100537185/practica4_SYTW"}
+                                                        %u Accede al repositorio de github
+                %script{:src => "public/js/bootstrap.js"}

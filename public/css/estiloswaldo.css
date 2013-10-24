@@ -1,0 +1,38 @@
+.nav.navbar-nav li { font-size: 1.5em; }
+
+.textores {
+        margin-top: 170px;
+        font-style:italic;
+        font-size: 200%;
+        color: green;
+}
+                        
+.titlebar {
+        font-style:bold;
+        font-size: 300%;
+        color: blue;
+}
+                                                
+.footer {
+        height: 60px;
+        bottom: -5px;
+        height: 50px;
+        left: 0;
+        right: 0;
+
+}
+
+.containerfoot {
+        background-color: black;
+        height: 50px;
+        padding-top: 20px;
+        
+}
+                
+.textofoot {
+        font-style:bold;
+        font-size: 200%;
+        color:blue;
+        margin: 0;
+        padding: 0;
+}
