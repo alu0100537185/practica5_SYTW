@@ -59,6 +59,7 @@ module RockPaperScissors
                         end
   
       def call(env)
+        set_env(env)
         req = Rack::Request.new(env)
   
         req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
@@ -101,13 +102,13 @@ module RockPaperScissors
     end   # App
   end     # RockPaperScissors
   
- # if $0 == __FILE__
-  #  require 'rack'
-   # Rack::Server.start(
-    #  :app => Rack::ShowExceptions.new(
-     #           Rack::Lint.new(
-      #            RockPaperScissors::App.new)), 
-      #:Port => 9292,
-      #:server => 'thin'
-    #)
-  #end
+  if $0 == __FILE__
+    require 'rack'
+    Rack::Server.start(
+      :app => Rack::ShowExceptions.new(
+                Rack::Lint.new(
+                  RockPaperScissors::App.new)), 
+      :Port => 9292,
+      :server => 'thin'
+    )
+  end
