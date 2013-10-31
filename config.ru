@@ -1,4 +1,4 @@
-require './piedrapapeltijera'
+require './lib/piedrapapeltijera'
 
 builder = Rack::Builder.new do
         use Rack::Static, :urls => ["/public"]
